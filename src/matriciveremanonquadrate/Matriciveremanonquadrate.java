@@ -16,12 +16,14 @@ public class Matriciveremanonquadrate {
         colonne = scenario.nextInt();
         int matro[][] = new int[righe][colonne];
 
+        //actual inserimento dei numeri
         for (int i = 0; i < righe; i++) {
             for (int j = 0; j < colonne; j++) {
                 matro[i][j] = rando.nextInt(10);
             }
         }
 
+        //parte uno del codice (primo print)
         for (int i = 0; i < righe; i++) {
             for (int j = 0; j < colonne; j++) {
                 if (i % 2 == 0) {
@@ -38,9 +40,11 @@ public class Matriciveremanonquadrate {
             }
             System.out.println();
         }
-
+        
+        //spazio generico
         System.out.println();
 
+        //seconda parte, è identica alla prima però... più efficiente non si poteva?
         for (int i = 0; i < righe; i++) {
             for (int j = 0; j < colonne; j++) {
                 if (i % 2 == 0) {
@@ -51,12 +55,11 @@ public class Matriciveremanonquadrate {
                         System.out.print("  ");
                     }
                     if (j % 2 == 1) {
-                        System.out.print(matro[i][j]);
+                        System.out.print(matro[i][j] +" ");
                     }
                 }
             }
             System.out.println();
         }
-
     }
 }
